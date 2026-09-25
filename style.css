@@ -785,3 +785,89 @@ img {
 .page-hero p {
     max-width: 700px;
 }
+/* =========================================
+   PORTFOLIO
+========================================= */
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.portfolio-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.08);
+}
+
+.portfolio-image {
+    min-height: 280px;
+}
+
+.portfolio-placeholder {
+    background:
+        linear-gradient(
+            135deg,
+            #111111,
+            #2b2b2b
+        );
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.portfolio-info {
+    padding: 28px;
+}
+
+.portfolio-category {
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    color: #888;
+}
+
+.portfolio-info h3 {
+    font-size: 1.35rem;
+    margin: 10px 0;
+}
+
+.portfolio-info p {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.portfolio-info a {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 0.85rem;
+    font-weight: 800;
+}
+
+.portfolio-info a:hover {
+    color: #b38300;
+}
+
+
+@media (max-width: 650px) {
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-image {
+        min-height: 220px;
+    }
+
+}
