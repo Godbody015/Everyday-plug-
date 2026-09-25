@@ -765,3 +765,23 @@ img {
         width: 100%;
     }
 }
+/* =========================================
+   INNER PAGE HERO
+========================================= */
+
+.page-hero {
+    min-height: 500px;
+}
+
+.page-hero .container {
+    max-width: 900px;
+    padding: 80px 0;
+}
+
+.page-hero h1 {
+    max-width: 800px;
+}
+
+.page-hero p {
+    max-width: 700px;
+}
