@@ -1032,3 +1032,72 @@ img {
     }
 
 }
+/* =========================================
+   QUOTATION PAGE
+========================================= */
+
+.light-section {
+    background: var(--light);
+}
+
+.quote-layout {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 70px;
+    align-items: start;
+}
+
+.quote-intro h2 {
+    font-size: 2.4rem;
+    margin: 15px 0;
+}
+
+.quote-intro > p {
+    color: var(--muted);
+    line-height: 1.8;
+    max-width: 500px;
+}
+
+.quote-note {
+    margin-top: 40px;
+    padding: 25px;
+    background: var(--white);
+    border-left: 4px solid var(--secondary);
+}
+
+.quote-note strong {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.quote-note p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.88rem;
+    line-height: 1.7;
+}
+
+.quote-form-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 40px;
+    border-radius: 14px;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.05);
+}
+
+@media (max-width: 800px) {
+
+    .quote-layout {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .quote-form-card {
+        padding: 25px;
+    }
+
+    .quote-intro h2 {
+        font-size: 2rem;
+    }
+
+}
