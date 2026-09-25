@@ -1155,3 +1155,36 @@ img {
 .dark-card span {
     color: var(--secondary);
 }
+/* =========================================
+   LEGAL PAGES
+========================================= */
+
+.legal-content {
+    max-width: 850px;
+}
+
+.legal-content h2 {
+    margin-top: 45px;
+    margin-bottom: 15px;
+    font-size: 1.45rem;
+}
+
+.legal-content h2:first-child {
+    margin-top: 0;
+}
+
+.legal-content p,
+.legal-content li {
+    color: var(--muted);
+    line-height: 1.8;
+    font-size: 0.95rem;
+}
+
+.legal-content ul {
+    padding-left: 25px;
+}
+
+.legal-content a {
+    color: #9a7200;
+    font-weight: 700;
+}
