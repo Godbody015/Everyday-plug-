@@ -2,39 +2,39 @@
 
 ## Building Local Businesses for the Digital World
 
-Everyday Plug is a South African digital solutions business focused on helping local and upcoming businesses establish a strong online presence. Our mission is simple: give entrepreneurs the tools, technology, and branding they need to launch, grow, and compete in the digital economy.
+Everyday Plug is a South African digital solutions business helping local and upcoming businesses establish a strong digital presence and get the tools they need to grow.
 
 ### 🚀 What We Do
 
-- 🌐 Website Creation (Business & E-commerce)
-- ☁️ Website Hosting & Domain Setup
-- 📈 Digital Marketing & Social Media Presence
-- 🎨 Business Branding & Graphic Design
-- 🛒 POS System Setup & Business Digitalisation
-- 🚗 Uber Merchant & Online Store Setup
-- 🔒 Cybersecurity Training Courses
-- 💻 Web Development Courses
+* 🌐 Website Creation
+* ☁️ Website Hosting & Domain Setup
+* 📈 Digital Marketing & Social Media Presence
+* 🎨 Business Branding & Graphic Design
+* 🛒 POS & Business System Setup
+* 🚗 Uber Merchant Setup
+* 🔒 Cybersecurity Training
+* 💻 Web Development Courses
 
 ### 🎯 Our Mission
 
-To empower local businesses by providing affordable digital services—from building professional websites and creating powerful brands to setting up business systems and online platforms. Whatever it takes to get a business on the road, we're here to make it happen.
+To make digital solutions more accessible to local businesses by connecting entrepreneurs with the right technology, services, and trusted specialists needed to get their businesses on the road.
 
 ### 🌍 Our Vision
 
-To become South Africa's trusted digital partner for small businesses, helping entrepreneurs transform ideas into successful, sustainable businesses through technology, education, and innovation.
+To become a trusted digital business partner for entrepreneurs across South Africa, connecting businesses with practical technology, marketing, education, and digital solutions.
 
 ### 🤝 Who We Work With
 
-- Restaurants & Cafés
-- Clothing & Fashion Brands
-- Traditional Shops
-- Salons & Beauty Businesses
-- Startups & Small Businesses
-- Independent Entrepreneurs
+* Restaurants & Cafés
+* Clothing & Fashion Businesses
+* Traditional Shops
+* Salons & Beauty Businesses
+* Startups & Small Businesses
+* Independent Entrepreneurs
 
 ### 📚 Education
 
-We believe knowledge creates opportunity. Alongside our business services, Everyday Plug offers practical cybersecurity and web development courses designed to help young people build valuable digital skills.
+As Everyday Plug grows, we aim to provide practical cybersecurity and web development education to help people develop valuable digital skills.
 
 ---
 
