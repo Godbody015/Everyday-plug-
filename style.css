@@ -1101,3 +1101,57 @@ img {
     }
 
 }
+/* =========================================
+   PORTFOLIO STATUS
+========================================= */
+
+.portfolio-placeholder > div {
+    text-align: center;
+}
+
+.portfolio-placeholder span {
+    display: block;
+    font-size: 0.7rem;
+    opacity: 0.7;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.portfolio-placeholder strong {
+    display: block;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+
+.portfolio-status {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 7px 10px;
+    background: #f5f5f5;
+    color: #777;
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+}
+
+.light-heading h2,
+.light-heading p {
+    color: var(--white);
+}
+
+.dark-card {
+    background: #202020;
+    border-color: #333;
+}
+
+.dark-card h3 {
+    color: var(--white);
+}
+
+.dark-card p {
+    color: #aaa;
+}
+
+.dark-card span {
+    color: var(--secondary);
+}
