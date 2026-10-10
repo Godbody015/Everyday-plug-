@@ -26,8 +26,10 @@
             object-position: top;
         }
 
-        .portfolio-link {
+        .portfolio-link,
+        .portfolio-info .portfolio-link {
             display: inline-block;
+            margin-top: 0;
             padding: 10px 16px;
             background: #f5b800;
             color: #111;
@@ -39,14 +41,31 @@
             transition: transform 0.2s ease, background 0.2s ease;
         }
 
-        .portfolio-link:hover {
+        .portfolio-link:hover,
+        .portfolio-info .portfolio-link:hover {
             background: #ffcb2e;
+            color: #111;
             transform: translateY(-2px);
         }
 
+        /* Classes this page uses that style.css does not define */
+        .section { padding: 100px 0; }
+        .dark-section { background: var(--dark-section); color: #fff; }
+        .dark-section .process-grid { border-top: none; gap: 18px; }
+        .process-card {
+            padding: 28px;
+            border: 1px solid #333;
+            border-radius: 10px;
+        }
+        .process-card span { font-size: 0.85rem; font-weight: 900; }
+        .process-card h3 { margin: 14px 0 10px; }
+        .process-card p { font-size: 0.9rem; }
+        .portfolio-info { display: flex; flex-direction: column; align-items: flex-start; }
+        .portfolio-info p { margin-bottom: 20px; }
+
         /* ---------- Slideshow hero ---------- */
         .showcase {
-            padding: 48px 0 56px;
+            padding: 36px 0 56px;
             background: linear-gradient(180deg, #f7f6f2 0%, #ffffff 100%);
         }
         .showcase h1 {
@@ -56,19 +75,23 @@
             max-width: 760px;
         }
         .slider {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            min-height: max(560px, calc(100vh - 400px));
             background: #111;
             border-radius: 18px;
-            padding: 36px;
+            padding: 48px 56px 36px;
             color: #fff;
             box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
             overflow: hidden;
         }
-        .slides { display: grid; }
+        .slides { display: grid; flex: 1; align-content: center; }
         .slide {
             grid-area: 1 / 1;
             display: grid;
-            grid-template-columns: 0.9fr 1.3fr;
-            gap: 36px;
+            grid-template-columns: 0.8fr 1.4fr;
+            gap: 56px;
             align-items: center;
             opacity: 0;
             visibility: hidden;
@@ -98,14 +121,15 @@
         }
         .slide-text h2 {
             color: #fff;
-            font-size: clamp(1.6rem, 3vw, 2.4rem);
+            font-size: clamp(1.6rem, 3.4vw, 3.2rem);
             line-height: 1.08;
             margin: 0 0 14px;
         }
         .slide-text p {
             color: #bdbdbd;
             line-height: 1.6;
-            margin: 0 0 24px;
+            font-size: clamp(1rem, 1.2vw, 1.2rem);
+            margin: 0 0 28px;
         }
         .browser {
             background: #1e1e1e;
@@ -175,7 +199,7 @@
         }
         .arrow:hover { background: #f5b800; color: #111; border-color: #f5b800; }
         @media (max-width: 800px) {
-            .slider { padding: 22px; }
+            .slider { padding: 22px; min-height: 0; }
             .slide { grid-template-columns: 1fr; gap: 22px; }
             .slide-visual { order: -1; }
         }
@@ -187,33 +211,29 @@
 
 <body>
 
-<header class="header">
-
-    <div class="container header-inner">
+<header class="site-header">
+    <div class="container nav-container">
 
         <a href="index.html" class="logo">
             EVERYDAY<span>PLUG</span>
         </a>
 
-        <button class="menu-toggle" id="menuToggle">☰</button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
+            ☰
+        </button>
 
         <nav class="navigation" id="navigation">
-
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="services.html">Services</a>
-            <a href="portfolio.html">Portfolio</a>
+            <a href="portfolio.html" class="active">Portfolio</a>
             <a href="courses.html">Courses</a>
             <a href="contact.html">Contact</a>
-
-            <a href="quotation.html" class="nav-cta">
-                Get a Quote
-            </a>
-
         </nav>
 
-    </div>
+        <a href="quotation.html" class="nav-button">Get a Quote</a>
 
+    </div>
 </header>
 
 
@@ -677,12 +697,9 @@
 
     <!-- CTA -->
     <section class="cta-section">
+        <div class="container cta-content">
 
-        <div class="container">
-
-            <span class="eyebrow">
-                HAVE A PROJECT?
-            </span>
+            <span class="section-label">HAVE A PROJECT?</span>
 
             <h2>
                 Your business could be next.
@@ -693,55 +710,60 @@
                 work out the next step.
             </p>
 
-            <a href="quotation.html" class="btn btn-primary">
-                Start Your Project →
-            </a>
+            <div class="hero-buttons">
+                <a href="quotation.html" class="btn btn-light">
+                    Start Your Project →
+                </a>
+            </div>
 
         </div>
-
     </section>
 
 </main>
 
 
-<footer class="footer">
+<footer class="site-footer">
 
-    <div class="container footer-inner">
+    <div class="container footer-grid">
 
         <div>
-
-            <h3>
-                EVERYDAY PLUG
-            </h3>
+            <a href="index.html" class="footer-logo">
+                EVERYDAY<span>PLUG</span>
+            </a>
 
             <p>
-                Building businesses. Creating opportunities.
-                Growing digitally.
+                Helping South African businesses build their digital
+                presence and get moving.
             </p>
-
         </div>
 
-
-        <div class="footer-links">
-
-            <a href="index.html">Home</a>
+        <div>
+            <h4>Explore</h4>
             <a href="about.html">About</a>
             <a href="services.html">Services</a>
             <a href="portfolio.html">Portfolio</a>
             <a href="courses.html">Courses</a>
-            <a href="contact.html">Contact</a>
+        </div>
 
+        <div>
+            <h4>Contact</h4>
+            <a href="quotation.html">Get a Quote</a>
+            <a href="contact.html">WhatsApp Us</a>
         </div>
 
     </div>
 
+    <div class="footer-bottom">
+        <div class="container">
+            <p>
+                © 2026 Everyday Plug. All rights reserved.
+            </p>
 
-    <div class="container footer-bottom">
-
-        <p>
-            © 2026 Everyday Plug. All rights reserved.
-        </p>
-
+            <div>
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+            </div>
+        </div>
     </div>
 
 </footer>
