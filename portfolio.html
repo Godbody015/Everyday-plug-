@@ -43,6 +43,145 @@
             background: #ffcb2e;
             transform: translateY(-2px);
         }
+
+        /* ---------- Slideshow hero ---------- */
+        .showcase {
+            padding: 48px 0 56px;
+            background: linear-gradient(180deg, #f7f6f2 0%, #ffffff 100%);
+        }
+        .showcase h1 {
+            font-size: clamp(1.9rem, 4.2vw, 3.2rem);
+            line-height: 1.05;
+            margin: 10px 0 28px;
+            max-width: 760px;
+        }
+        .slider {
+            background: #111;
+            border-radius: 18px;
+            padding: 36px;
+            color: #fff;
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+            overflow: hidden;
+        }
+        .slides { display: grid; }
+        .slide {
+            grid-area: 1 / 1;
+            display: grid;
+            grid-template-columns: 0.9fr 1.3fr;
+            gap: 36px;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(24px);
+            transition: opacity 0.6s ease, transform 0.6s ease, visibility 0.6s;
+        }
+        .slide.is-active {
+            opacity: 1;
+            visibility: visible;
+            transform: none;
+        }
+        .slide-count {
+            display: block;
+            color: #8a8a8a;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            margin-bottom: 14px;
+        }
+        .slide-cat {
+            display: block;
+            color: #f5b800;
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            margin-bottom: 10px;
+        }
+        .slide-text h2 {
+            color: #fff;
+            font-size: clamp(1.6rem, 3vw, 2.4rem);
+            line-height: 1.08;
+            margin: 0 0 14px;
+        }
+        .slide-text p {
+            color: #bdbdbd;
+            line-height: 1.6;
+            margin: 0 0 24px;
+        }
+        .browser {
+            background: #1e1e1e;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #333;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+        }
+        .browser-bar {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 12px;
+            background: #2a2a2a;
+        }
+        .browser-bar i {
+            width: 9px; height: 9px;
+            border-radius: 50%;
+            background: #555;
+            display: block;
+        }
+        .browser-bar span {
+            margin-left: 10px;
+            font-size: 0.72rem;
+            color: #9a9a9a;
+            background: #1a1a1a;
+            padding: 4px 12px;
+            border-radius: 20px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .browser-shot { aspect-ratio: 16 / 10; background: #1a1a1a; }
+        .browser-shot img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            object-position: top;
+            display: block;
+        }
+        .slider-controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 18px;
+            margin-top: 28px;
+        }
+        .dots { display: flex; gap: 10px; }
+        .dot {
+            width: 10px; height: 10px;
+            border-radius: 50%;
+            border: 0;
+            padding: 0;
+            background: #444;
+            cursor: pointer;
+            transition: width 0.3s ease, background 0.3s ease;
+        }
+        .dot.is-active { width: 28px; border-radius: 10px; background: #f5b800; }
+        .arrow {
+            width: 40px; height: 40px;
+            border-radius: 50%;
+            border: 1px solid #444;
+            background: transparent;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s ease, color 0.2s ease;
+        }
+        .arrow:hover { background: #f5b800; color: #111; border-color: #f5b800; }
+        @media (max-width: 800px) {
+            .slider { padding: 22px; }
+            .slide { grid-template-columns: 1fr; gap: 22px; }
+            .slide-visual { order: -1; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .slide { transition: none; }
+        }
     </style>
 </head>
 
@@ -80,8 +219,8 @@
 
 <main>
 
-    <!-- HERO -->
-    <section class="hero page-hero">
+    <!-- HERO + SLIDESHOW -->
+    <section class="showcase">
 
         <div class="container">
 
@@ -93,10 +232,114 @@
                 Projects Built to Move Businesses Forward.
             </h1>
 
-            <p>
-                A selection of websites and digital projects delivered
-                for businesses and entrepreneurs.
-            </p>
+            <div class="slider" id="slider" aria-roledescription="carousel" aria-label="Featured projects">
+
+                <div class="slides">
+
+                <div class="slide is-active" aria-hidden="false">
+                    <div class="slide-text">
+                        <span class="slide-count">01 / 05</span>
+                        <span class="slide-cat">BUSINESS WEBSITE</span>
+                        <h2>Mr. Qhubeka Camera Repair</h2>
+                        <p>Camera repairs, second-hand cameras and accessories for a Johannesburg specialist, with WhatsApp enquiries built in.</p>
+                        <a href="https://trustqhubekacamerarepair.co.za/" class="portfolio-link" target="_blank" rel="noopener noreferrer">VISIT SITE →</a>
+                    </div>
+                    <div class="slide-visual">
+                        <div class="browser">
+                            <div class="browser-bar"><i></i><i></i><i></i><span>trustqhubekacamerarepair.co.za</span></div>
+                            <div class="browser-shot">
+                                <img src="images/qhubeka-camera-repair.jpg" alt="Mr. Qhubeka Camera Repair website preview" loading="lazy"
+                     onerror="this.onerror=null;this.src='https://s0.wp.com/mshots/v1/https%3A%2F%2Ftrustqhubekacamerarepair.co.za%2F?w=1200&amp;h=750'">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide" aria-hidden="true">
+                    <div class="slide-text">
+                        <span class="slide-count">02 / 05</span>
+                        <span class="slide-cat">E-COMMERCE WEBSITE</span>
+                        <h2>XGM Wellness</h2>
+                        <p>A wellness and beauty brand site with an online shop, cart and a reseller sign-up, built around natural products.</p>
+                        <a href="https://www.xgmwellness.co.za/" class="portfolio-link" target="_blank" rel="noopener noreferrer">VISIT SITE →</a>
+                    </div>
+                    <div class="slide-visual">
+                        <div class="browser">
+                            <div class="browser-bar"><i></i><i></i><i></i><span>www.xgmwellness.co.za</span></div>
+                            <div class="browser-shot">
+                                <img src="images/xgm-wellness.jpg" alt="XGM Wellness website preview" loading="lazy"
+                     onerror="this.onerror=null;this.src='https://s0.wp.com/mshots/v1/https%3A%2F%2Fwww.xgmwellness.co.za%2F?w=1200&amp;h=750'">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide" aria-hidden="true">
+                    <div class="slide-text">
+                        <span class="slide-count">03 / 05</span>
+                        <span class="slide-cat">WEB APP</span>
+                        <h2>JoziLift</h2>
+                        <p>Live taxi tracking for Johannesburg commuters: find a taxi near you, or sign in as a driver.</p>
+                        <a href="https://jozilift.mogau-sebothoma.workers.dev" class="portfolio-link" target="_blank" rel="noopener noreferrer">VISIT SITE →</a>
+                    </div>
+                    <div class="slide-visual">
+                        <div class="browser">
+                            <div class="browser-bar"><i></i><i></i><i></i><span>jozilift.mogau-sebothoma.workers.dev</span></div>
+                            <div class="browser-shot">
+                                <img src="images/jozilift.jpg" alt="JoziLift website preview" loading="lazy"
+                     onerror="this.onerror=null;this.src='https://s0.wp.com/mshots/v1/https%3A%2F%2Fjozilift.mogau-sebothoma.workers.dev?w=1200&amp;h=750'">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide" aria-hidden="true">
+                    <div class="slide-text">
+                        <span class="slide-count">04 / 05</span>
+                        <span class="slide-cat">FASHION WEBSITE</span>
+                        <h2>Mandla&#39;s Traditional Fashion</h2>
+                        <p>A showcase for traditional clothes, jewellery, headwraps and Shweshwe fabric, with a gallery and contact details.</p>
+                        <a href="https://mandlastraditionalfashion.online" class="portfolio-link" target="_blank" rel="noopener noreferrer">VISIT SITE →</a>
+                    </div>
+                    <div class="slide-visual">
+                        <div class="browser">
+                            <div class="browser-bar"><i></i><i></i><i></i><span>mandlastraditionalfashion.online</span></div>
+                            <div class="browser-shot">
+                                <img src="images/mandlas-traditional-fashion.jpg" alt="Mandla&#39;s Traditional Fashion website preview" loading="lazy"
+                     onerror="this.onerror=null;this.src='https://s0.wp.com/mshots/v1/https%3A%2F%2Fmandlastraditionalfashion.online?w=1200&amp;h=750'">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide" aria-hidden="true">
+                    <div class="slide-text">
+                        <span class="slide-count">05 / 05</span>
+                        <span class="slide-cat">E-COMMERCE WEBSITE</span>
+                        <h2>Vinka Traditional Shop</h2>
+                        <p>An online shop for traditional clothing, jewellery, accessories and handcrafted cultural products, with a cart and WhatsApp chat.</p>
+                        <a href="https://vinka-traditional-shop.mogau-sebothoma.workers.dev" class="portfolio-link" target="_blank" rel="noopener noreferrer">VISIT SITE →</a>
+                    </div>
+                    <div class="slide-visual">
+                        <div class="browser">
+                            <div class="browser-bar"><i></i><i></i><i></i><span>vinka-traditional-shop.mogau-sebothoma.workers.dev</span></div>
+                            <div class="browser-shot">
+                                <img src="images/vinka-traditional-shop.jpg" alt="Vinka Traditional Shop website preview" loading="lazy"
+                     onerror="this.onerror=null;this.src='https://s0.wp.com/mshots/v1/https%3A%2F%2Fvinka-traditional-shop.mogau-sebothoma.workers.dev?w=1200&amp;h=750'">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+
+                <div class="slider-controls">
+                    <button type="button" class="arrow" id="prevSlide" aria-label="Previous project">←</button>
+                    <div class="dots"><button type="button" class="dot is-active" aria-label="Show project 1"></button><button type="button" class="dot" aria-label="Show project 2"></button><button type="button" class="dot" aria-label="Show project 3"></button><button type="button" class="dot" aria-label="Show project 4"></button><button type="button" class="dot" aria-label="Show project 5"></button></div>
+                    <button type="button" class="arrow" id="nextSlide" aria-label="Next project">→</button>
+                </div>
+
+            </div>
 
         </div>
 
@@ -128,24 +371,12 @@
 
             <div class="portfolio-grid">
 
-                <!--
-                    SCREENSHOTS: the cards use an automatic live preview of each site.
-                    To use your own screenshot instead, save it in an "images" folder and
-                    replace the <img src="..."> link with:
-
-                    <div class="portfolio-image">
-                        <img src="images/your-file-name.jpg" alt="Project name website" loading="lazy">
-                    </div>
-                -->
-
-
                 <!-- PROJECT 01 -->
                 <article class="portfolio-card">
 
                     <div class="portfolio-image">
-                        <img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Ftrustqhubekacamerarepair.co.za%2F?w=1200&h=750"
-                             alt="Mr. Qhubeka Camera Repair Store website preview"
-                             loading="lazy">
+                        <img src="images/qhubeka-camera-repair.jpg" alt="Mr. Qhubeka Camera Repair website preview" loading="lazy"
+                     onerror="this.onerror=null;this.src='https://s0.wp.com/mshots/v1/https%3A%2F%2Ftrustqhubekacamerarepair.co.za%2F?w=1200&amp;h=750'">
                     </div>
 
                     <div class="portfolio-info">
@@ -159,11 +390,7 @@
                         </h3>
 
                         <p>
-                            A website for a Johannesburg camera repair
-                            specialist, covering repair services, second-hand
-                            cameras and accessories, and a clear repair
-                            process. Customers can enquire or request a quote
-                            directly on WhatsApp.
+                            A website for a Johannesburg camera repair specialist, covering repair services, second-hand cameras and accessories, and a clear repair process. Customers can enquire or request a quote directly on WhatsApp.
                         </p>
 
                         <a href="https://trustqhubekacamerarepair.co.za/"
@@ -182,15 +409,14 @@
                 <article class="portfolio-card">
 
                     <div class="portfolio-image">
-                        <img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fwww.xgmwellness.co.za%2F?w=1200&h=750"
-                             alt="XGM Wellness website preview"
-                             loading="lazy">
+                        <img src="images/xgm-wellness.jpg" alt="XGM Wellness website preview" loading="lazy"
+                     onerror="this.onerror=null;this.src='https://s0.wp.com/mshots/v1/https%3A%2F%2Fwww.xgmwellness.co.za%2F?w=1200&amp;h=750'">
                     </div>
 
                     <div class="portfolio-info">
 
                         <span class="portfolio-category">
-                            WELLNESS WEBSITE
+                            E-COMMERCE WEBSITE
                         </span>
 
                         <h3>
@@ -198,9 +424,7 @@
                         </h3>
 
                         <p>
-                            A website for XGM Wellness, built to present the
-                            business online and make it easy for clients to
-                            get in touch.
+                            An online store for a natural wellness and beauty brand, with a product shop, shopping cart, a "Become a Reseller" page and WhatsApp chat for customers.
                         </p>
 
                         <a href="https://www.xgmwellness.co.za/"
@@ -219,25 +443,22 @@
                 <article class="portfolio-card">
 
                     <div class="portfolio-image">
-                        <img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fjozilift.mogau-sebothoma.workers.dev?w=1200&h=750"
-                             alt="Jozi Lift website preview"
-                             loading="lazy">
+                        <img src="images/jozilift.jpg" alt="JoziLift website preview" loading="lazy"
+                     onerror="this.onerror=null;this.src='https://s0.wp.com/mshots/v1/https%3A%2F%2Fjozilift.mogau-sebothoma.workers.dev?w=1200&amp;h=750'">
                     </div>
 
                     <div class="portfolio-info">
 
                         <span class="portfolio-category">
-                            BUSINESS WEBSITE
+                            WEB APP
                         </span>
 
                         <h3>
-                            Jozi Lift
+                            JoziLift
                         </h3>
 
                         <p>
-                            A website for Jozi Lift, built to present the
-                            business and its services clearly to customers
-                            online.
+                            A live taxi tracking web app for Johannesburg commuters. Riders find a taxi near them and drivers can go live, so people can find their ride.
                         </p>
 
                         <a href="https://jozilift.mogau-sebothoma.workers.dev"
@@ -256,9 +477,8 @@
                 <article class="portfolio-card">
 
                     <div class="portfolio-image">
-                        <img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fmandlastraditionalfashion.online?w=1200&h=750"
-                             alt="Mandla's Traditional Fashion website preview"
-                             loading="lazy">
+                        <img src="images/mandlas-traditional-fashion.jpg" alt="Mandla&#39;s Traditional Fashion website preview" loading="lazy"
+                     onerror="this.onerror=null;this.src='https://s0.wp.com/mshots/v1/https%3A%2F%2Fmandlastraditionalfashion.online?w=1200&amp;h=750'">
                     </div>
 
                     <div class="portfolio-info">
@@ -268,13 +488,11 @@
                         </span>
 
                         <h3>
-                            Mandla's Traditional Fashion
+                            Mandla&#39;s Traditional Fashion
                         </h3>
 
                         <p>
-                            An online home for Mandla's Traditional Fashion,
-                            showcasing the brand and its traditional wear to
-                            customers.
+                            A website for a supplier of traditional clothes, jewellery, headwraps, curtains, Shweshwe fabric, thread and ribbons, with a gallery, product range and contact details.
                         </p>
 
                         <a href="https://mandlastraditionalfashion.online"
@@ -292,13 +510,9 @@
                 <!-- PROJECT 05 -->
                 <article class="portfolio-card">
 
-                    <div class="portfolio-image portfolio-placeholder">
-
-                        <div>
-                            <span>E-COMMERCE WEBSITE</span>
-                            <strong>VINKA TRADITIONAL SHOP</strong>
-                        </div>
-
+                    <div class="portfolio-image">
+                        <img src="images/vinka-traditional-shop.jpg" alt="Vinka Traditional Shop website preview" loading="lazy"
+                     onerror="this.onerror=null;this.src='https://s0.wp.com/mshots/v1/https%3A%2F%2Fvinka-traditional-shop.mogau-sebothoma.workers.dev?w=1200&amp;h=750'">
                     </div>
 
                     <div class="portfolio-info">
@@ -312,18 +526,15 @@
                         </h3>
 
                         <p>
-                            An online shop for Vinka Traditional Shop,
-                            presenting its traditional products to customers.
+                            An online shop for authentic traditional clothing, jewellery, accessories and handcrafted cultural products, with a product collection, shopping cart and WhatsApp chat.
                         </p>
 
-                        <!-- ADD THE BUTTON BELOW once you have the Vinka URL:
-                        <a href="https://YOUR-VINKA-URL"
+                        <a href="https://vinka-traditional-shop.mogau-sebothoma.workers.dev"
                            class="portfolio-link"
                            target="_blank"
                            rel="noopener noreferrer">
                             VISIT SITE →
                         </a>
-                        -->
 
                     </div>
 
@@ -537,6 +748,49 @@
 
 
 <script src="script.js"></script>
+
+
+<script>
+(function () {
+    var slider = document.getElementById('slider');
+    if (!slider) return;
+    var slides = slider.querySelectorAll('.slide');
+    var dots = slider.querySelectorAll('.dot');
+    var current = 0, timer = null;
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function show(i) {
+        current = (i + slides.length) % slides.length;
+        slides.forEach(function (s, n) {
+            var on = n === current;
+            s.classList.toggle('is-active', on);
+            s.setAttribute('aria-hidden', on ? 'false' : 'true');
+            dots[n].classList.toggle('is-active', on);
+        });
+    }
+    function start() { if (!reduce) { stop(); timer = setInterval(function () { show(current + 1); }, 5500); } }
+    function stop() { if (timer) { clearInterval(timer); timer = null; } }
+
+    document.getElementById('nextSlide').addEventListener('click', function () { show(current + 1); start(); });
+    document.getElementById('prevSlide').addEventListener('click', function () { show(current - 1); start(); });
+    dots.forEach(function (d, n) { d.addEventListener('click', function () { show(n); start(); }); });
+
+    slider.addEventListener('mouseenter', stop);
+    slider.addEventListener('mouseleave', start);
+
+    var x0 = null;
+    slider.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; stop(); }, { passive: true });
+    slider.addEventListener('touchend', function (e) {
+        if (x0 !== null) {
+            var dx = e.changedTouches[0].clientX - x0;
+            if (Math.abs(dx) > 40) show(current + (dx < 0 ? 1 : -1));
+        }
+        x0 = null; start();
+    });
+
+    start();
+})();
+</script>
 
 </body>
 </html>
