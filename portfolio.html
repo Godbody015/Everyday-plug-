@@ -11,6 +11,13 @@
 
     <!-- Extra styles for the project cards (so style.css does not need editing) -->
     <style>
+        .portfolio-image:has(img) {
+            aspect-ratio: 16 / 10;
+            height: auto;
+            overflow: hidden;
+            background: #1a1a1a;
+        }
+
         .portfolio-image img {
             width: 100%;
             height: 100%;
@@ -122,9 +129,9 @@
             <div class="portfolio-grid">
 
                 <!--
-                    SCREENSHOTS: each card below shows a dark placeholder with the project name.
-                    To use a real screenshot, save it in an "images" folder and replace the
-                    <div class="portfolio-image portfolio-placeholder"> ... </div> block with:
+                    SCREENSHOTS: the cards use an automatic live preview of each site.
+                    To use your own screenshot instead, save it in an "images" folder and
+                    replace the <img src="..."> link with:
 
                     <div class="portfolio-image">
                         <img src="images/your-file-name.jpg" alt="Project name website" loading="lazy">
@@ -135,13 +142,10 @@
                 <!-- PROJECT 01 -->
                 <article class="portfolio-card">
 
-                    <div class="portfolio-image portfolio-placeholder">
-
-                        <div>
-                            <span>BUSINESS WEBSITE</span>
-                            <strong>MR. QHUBEKA</strong>
-                        </div>
-
+                    <div class="portfolio-image">
+                        <img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Ftrustqhubekacamerarepair.co.za%2F?w=1200&h=750"
+                             alt="Mr. Qhubeka Camera Repair Store website preview"
+                             loading="lazy">
                     </div>
 
                     <div class="portfolio-info">
@@ -177,13 +181,10 @@
                 <!-- PROJECT 02 -->
                 <article class="portfolio-card">
 
-                    <div class="portfolio-image portfolio-placeholder">
-
-                        <div>
-                            <span>WELLNESS WEBSITE</span>
-                            <strong>XGM WELLNESS</strong>
-                        </div>
-
+                    <div class="portfolio-image">
+                        <img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fwww.xgmwellness.co.za%2F?w=1200&h=750"
+                             alt="XGM Wellness website preview"
+                             loading="lazy">
                     </div>
 
                     <div class="portfolio-info">
@@ -217,13 +218,10 @@
                 <!-- PROJECT 03 -->
                 <article class="portfolio-card">
 
-                    <div class="portfolio-image portfolio-placeholder">
-
-                        <div>
-                            <span>BUSINESS WEBSITE</span>
-                            <strong>JOZI LIFT</strong>
-                        </div>
-
+                    <div class="portfolio-image">
+                        <img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fjozilift.mogau-sebothoma.workers.dev?w=1200&h=750"
+                             alt="Jozi Lift website preview"
+                             loading="lazy">
                     </div>
 
                     <div class="portfolio-info">
@@ -257,13 +255,10 @@
                 <!-- PROJECT 04 -->
                 <article class="portfolio-card">
 
-                    <div class="portfolio-image portfolio-placeholder">
-
-                        <div>
-                            <span>FASHION WEBSITE</span>
-                            <strong>MANDLA'S TRADITIONAL FASHION</strong>
-                        </div>
-
+                    <div class="portfolio-image">
+                        <img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fmandlastraditionalfashion.online?w=1200&h=750"
+                             alt="Mandla's Traditional Fashion website preview"
+                             loading="lazy">
                     </div>
 
                     <div class="portfolio-info">
