@@ -8,6 +8,35 @@
     <meta name="description" content="Explore websites and digital projects created and coordinated by Everyday Plug for South African businesses and entrepreneurs.">
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- Extra styles for the project cards (so style.css does not need editing) -->
+    <style>
+        .portfolio-image img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .portfolio-link {
+            display: inline-block;
+            padding: 10px 16px;
+            background: #f5b800;
+            color: #111;
+            font-size: 0.8rem;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        .portfolio-link:hover {
+            background: #ffcb2e;
+            transform: translateY(-2px);
+        }
+    </style>
 </head>
 
 <body>
@@ -92,6 +121,16 @@
 
             <div class="portfolio-grid">
 
+                <!--
+                    SCREENSHOTS: each card below shows a dark placeholder with the project name.
+                    To use a real screenshot, save it in an "images" folder and replace the
+                    <div class="portfolio-image portfolio-placeholder"> ... </div> block with:
+
+                    <div class="portfolio-image">
+                        <img src="images/your-file-name.jpg" alt="Project name website" loading="lazy">
+                    </div>
+                -->
+
 
                 <!-- PROJECT 01 -->
                 <article class="portfolio-card">
@@ -99,8 +138,8 @@
                     <div class="portfolio-image portfolio-placeholder">
 
                         <div>
-                            <span>PROJECT 01</span>
-                            <strong>CASE STUDY</strong>
+                            <span>BUSINESS WEBSITE</span>
+                            <strong>MR. QHUBEKA</strong>
                         </div>
 
                     </div>
@@ -108,21 +147,27 @@
                     <div class="portfolio-info">
 
                         <span class="portfolio-category">
-                            WEBSITE PROJECT
+                            BUSINESS WEBSITE
                         </span>
 
                         <h3>
-                            Project Details Coming Soon
+                            Mr. Qhubeka Camera Repair
                         </h3>
 
                         <p>
-                            Project information, screenshots and the
-                            live website will be added here.
+                            A website for a Johannesburg camera repair
+                            specialist, covering repair services, second-hand
+                            cameras and accessories, and a clear repair
+                            process. Customers can enquire or request a quote
+                            directly on WhatsApp.
                         </p>
 
-                        <span class="portfolio-status">
-                            PROJECT INFORMATION PENDING
-                        </span>
+                        <a href="https://trustqhubekacamerarepair.co.za/"
+                           class="portfolio-link"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            VISIT SITE →
+                        </a>
 
                     </div>
 
@@ -135,8 +180,8 @@
                     <div class="portfolio-image portfolio-placeholder">
 
                         <div>
-                            <span>PROJECT 02</span>
-                            <strong>CASE STUDY</strong>
+                            <span>WELLNESS WEBSITE</span>
+                            <strong>XGM WELLNESS</strong>
                         </div>
 
                     </div>
@@ -144,21 +189,25 @@
                     <div class="portfolio-info">
 
                         <span class="portfolio-category">
-                            WEBSITE PROJECT
+                            WELLNESS WEBSITE
                         </span>
 
                         <h3>
-                            Project Details Coming Soon
+                            XGM Wellness
                         </h3>
 
                         <p>
-                            Project information, screenshots and the
-                            live website will be added here.
+                            A website for XGM Wellness, built to present the
+                            business online and make it easy for clients to
+                            get in touch.
                         </p>
 
-                        <span class="portfolio-status">
-                            PROJECT INFORMATION PENDING
-                        </span>
+                        <a href="https://www.xgmwellness.co.za/"
+                           class="portfolio-link"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            VISIT SITE →
+                        </a>
 
                     </div>
 
@@ -171,8 +220,8 @@
                     <div class="portfolio-image portfolio-placeholder">
 
                         <div>
-                            <span>PROJECT 03</span>
-                            <strong>CASE STUDY</strong>
+                            <span>BUSINESS WEBSITE</span>
+                            <strong>JOZI LIFT</strong>
                         </div>
 
                     </div>
@@ -180,21 +229,25 @@
                     <div class="portfolio-info">
 
                         <span class="portfolio-category">
-                            WEBSITE PROJECT
+                            BUSINESS WEBSITE
                         </span>
 
                         <h3>
-                            Project Details Coming Soon
+                            Jozi Lift
                         </h3>
 
                         <p>
-                            Project information, screenshots and the
-                            live website will be added here.
+                            A website for Jozi Lift, built to present the
+                            business and its services clearly to customers
+                            online.
                         </p>
 
-                        <span class="portfolio-status">
-                            PROJECT INFORMATION PENDING
-                        </span>
+                        <a href="https://jozilift.mogau-sebothoma.workers.dev"
+                           class="portfolio-link"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            VISIT SITE →
+                        </a>
 
                     </div>
 
@@ -207,8 +260,89 @@
                     <div class="portfolio-image portfolio-placeholder">
 
                         <div>
-                            <span>PROJECT 04</span>
-                            <strong>CASE STUDY</strong>
+                            <span>FASHION WEBSITE</span>
+                            <strong>MANDLA'S TRADITIONAL FASHION</strong>
+                        </div>
+
+                    </div>
+
+                    <div class="portfolio-info">
+
+                        <span class="portfolio-category">
+                            FASHION WEBSITE
+                        </span>
+
+                        <h3>
+                            Mandla's Traditional Fashion
+                        </h3>
+
+                        <p>
+                            An online home for Mandla's Traditional Fashion,
+                            showcasing the brand and its traditional wear to
+                            customers.
+                        </p>
+
+                        <a href="https://mandlastraditionalfashion.online"
+                           class="portfolio-link"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            VISIT SITE →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PROJECT 05 -->
+                <article class="portfolio-card">
+
+                    <div class="portfolio-image portfolio-placeholder">
+
+                        <div>
+                            <span>E-COMMERCE WEBSITE</span>
+                            <strong>VINKA TRADITIONAL SHOP</strong>
+                        </div>
+
+                    </div>
+
+                    <div class="portfolio-info">
+
+                        <span class="portfolio-category">
+                            E-COMMERCE WEBSITE
+                        </span>
+
+                        <h3>
+                            Vinka Traditional Shop
+                        </h3>
+
+                        <p>
+                            An online shop for Vinka Traditional Shop,
+                            presenting its traditional products to customers.
+                        </p>
+
+                        <!-- ADD THE BUTTON BELOW once you have the Vinka URL:
+                        <a href="https://YOUR-VINKA-URL"
+                           class="portfolio-link"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            VISIT SITE →
+                        </a>
+                        -->
+
+                    </div>
+
+                </article>
+
+
+                <!-- PROJECT 06 (keeps the grid even) -->
+                <article class="portfolio-card">
+
+                    <div class="portfolio-image portfolio-placeholder">
+
+                        <div>
+                            <span>NEXT UP</span>
+                            <strong>YOUR PROJECT</strong>
                         </div>
 
                     </div>
@@ -220,17 +354,17 @@
                         </span>
 
                         <h3>
-                            Project Details Coming Soon
+                            Your Business Could Be Next
                         </h3>
 
                         <p>
-                            Project information, screenshots and the
-                            live website will be added here.
+                            Tell us what you want to build and we'll make
+                            it happen.
                         </p>
 
-                        <span class="portfolio-status">
-                            PROJECT INFORMATION PENDING
-                        </span>
+                        <a href="quotation.html" class="portfolio-link">
+                            GET A QUOTE →
+                        </a>
 
                     </div>
 
