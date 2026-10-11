@@ -374,9 +374,15 @@ img {
     letter-spacing: -1.5px;
 }
 
-.intro-grid p {
-    color: var(--muted);
-    margin-bottom: 18px;
+/* lead sentence: the main message stands out, the rest stays quiet */
+.intro-grid > div:last-child p:first-child {
+    font-size: 1.35rem;
+    line-height: 1.5;
+    font-weight: 700;
+    color: var(--text);
+    border-left: 4px solid var(--secondary);
+    padding-left: 22px;
+    margin-bottom: 30px;
 }
 
 
