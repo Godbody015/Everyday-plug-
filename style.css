@@ -1308,3 +1308,60 @@ img {
     color: #9a7200;
     font-weight: 700;
 }
+
+
+/* =========================================
+   GENTLE FADE-IN
+========================================= */
+
+/* hero: plays once when the page loads */
+.page-hero .eyebrow,
+.page-hero h1,
+.page-hero p {
+    animation: fadeUp 0.8s ease both;
+}
+
+.page-hero h1 {
+    animation-delay: 0.12s;
+}
+
+.page-hero p {
+    animation-delay: 0.26s;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* scroll fade-in (script.js adds these classes) */
+.fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .page-hero .eyebrow,
+    .page-hero h1,
+    .page-hero p {
+        animation: none;
+    }
+
+    .fade-in {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
