@@ -169,3 +169,36 @@ if ('IntersectionObserver' in window) {
         });
     });
 })();
+
+
+/* home page "How we work": the yellow lines fill in as you scroll to it */
+(function () {
+    const steps = document.querySelector('.steps');
+    if (!steps) return;
+
+    const items = steps.querySelectorAll('.step');
+
+    function fillIn() {
+        items.forEach(function (item, i) {
+            setTimeout(function () {
+                item.classList.add('in');
+            }, i * 350);
+        });
+    }
+
+    steps.classList.add('js');
+
+    if (!('IntersectionObserver' in window)) {
+        fillIn();
+        return;
+    }
+
+    const observer = new IntersectionObserver(function (entries) {
+        if (entries[0].isIntersecting) {
+            fillIn();
+            observer.disconnect();
+        }
+    }, { threshold: 0.3 });
+
+    observer.observe(steps);
+})();
