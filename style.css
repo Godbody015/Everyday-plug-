@@ -1365,3 +1365,113 @@ img {
         transition: none;
     }
 }
+
+
+/* =========================================
+   HOME PAGE: DARK HERO
+========================================= */
+
+.hero-dark {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    min-height: 620px;
+    background: #000;
+    color: var(--white);
+}
+
+.hero-dark .hero-content {
+    width: min(1600px, 92%);
+    margin: 0 auto;
+    flex: 1;
+    padding: 60px 0 40px;
+}
+
+.hero-dark .eyebrow {
+    color: var(--secondary);
+}
+
+.hero-dark h1 {
+    max-width: 760px;
+    color: var(--white);
+    font-size: clamp(2.4rem, 4.6vw, 4rem);
+    line-height: 1.1;
+    letter-spacing: -2px;
+}
+
+.hero-dark h1 span {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 0 10px;
+    background: var(--secondary);
+    color: var(--primary);
+}
+
+.hero-dark p {
+    color: #bbbbbb;
+}
+
+.hero-dark .btn-primary {
+    background: var(--secondary);
+    color: var(--primary);
+}
+
+.hero-dark .btn-primary:hover {
+    background: var(--white);
+}
+
+.hero-dark .btn-secondary {
+    background: transparent;
+    border: 1px solid #666;
+    color: var(--white);
+}
+
+.hero-dark .btn-secondary:hover {
+    background: var(--white);
+    border-color: var(--white);
+    color: var(--primary);
+}
+
+.hero-dark .hero-logo-image {
+    max-width: 440px;
+}
+
+/* "What do you need?" row */
+.hero-helper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+    padding: 28px 0;
+    border-top: 1px solid #2a2a2a;
+}
+
+.helper-label {
+    margin-right: 10px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: #aaaaaa;
+}
+
+.helper-chip {
+    padding: 12px 20px;
+    border: 1px solid #555;
+    border-radius: 999px;
+    color: var(--white);
+    font-size: 0.9rem;
+    font-weight: 800;
+    transition: 0.3s ease;
+}
+
+.helper-chip:hover {
+    background: var(--secondary);
+    border-color: var(--secondary);
+    color: var(--primary);
+}
+
+@media (max-width: 780px) {
+    .hero-dark .hero-logo-image {
+        max-width: 300px;
+    }
+}
