@@ -1521,3 +1521,12 @@ img {
         animation: none;
     }
 }
+
+
+/* the turning globe is drawn on a canvas, sitting over the lettering */
+.hero-logo-spin canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
