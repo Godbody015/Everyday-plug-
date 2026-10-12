@@ -151,3 +151,21 @@ if ('IntersectionObserver' in window) {
 
     requestAnimationFrame(frame);
 })();
+
+
+/* home page pillars: click one to open it */
+(function () {
+    const pillars = document.querySelectorAll('.pillar');
+    if (!pillars.length) return;
+
+    pillars.forEach(function (pillar) {
+        const toggle = pillar.querySelector('.pillar-toggle');
+        toggle.addEventListener('click', function () {
+            pillars.forEach(function (p) {
+                const open = p === pillar;
+                p.classList.toggle('active', open);
+                p.querySelector('.pillar-toggle').setAttribute('aria-expanded', open);
+            });
+        });
+    });
+})();
