@@ -1475,3 +1475,49 @@ img {
         max-width: 300px;
     }
 }
+
+
+/* =========================================
+   HOME PAGE: SPINNING GLOBE LOGO
+========================================= */
+
+.hero-logo-spin {
+    position: relative;
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto;
+    aspect-ratio: 1000 / 923;
+    filter: drop-shadow(0 0 40px rgba(245, 183, 0, 0.15));
+}
+
+.hero-logo-spin img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* only the globe turns; the lettering stays still */
+.hero-logo-spin .logo-globe {
+    transform-origin: 50.06% 53.28%;
+    animation: globeSpin 30s linear infinite;
+}
+
+@keyframes globeSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 780px) {
+    .hero-logo-spin {
+        max-width: 300px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-logo-spin .logo-globe {
+        animation: none;
+    }
+}
