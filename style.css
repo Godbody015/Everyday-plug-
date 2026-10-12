@@ -1668,3 +1668,86 @@ img {
         transition: none;
     }
 }
+
+
+/* =========================================
+   HOME PAGE: HOW WE WORK
+========================================= */
+
+.how-section {
+    padding: 110px 0;
+    background: var(--white);
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+}
+
+.step {
+    position: relative;
+    padding-top: 26px;
+    border-top: 4px solid #e2e2dd;
+}
+
+/* the yellow line that fills in */
+.step::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--secondary);
+    transform-origin: left;
+    transition: transform 0.8s cubic-bezier(.2,.8,.2,1);
+}
+
+/* the script switches this on, so the page still works without it */
+.steps.js .step::before {
+    transform: scaleX(0);
+}
+
+.steps.js .step.in::before {
+    transform: scaleX(1);
+}
+
+.step-number {
+    display: inline-block;
+    padding: 3px 9px;
+    background: var(--secondary);
+    color: var(--primary);
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 900;
+}
+
+.step h3 {
+    margin: 14px 0 10px;
+    font-size: 1.3rem;
+}
+
+.step p {
+    color: var(--muted);
+    font-size: 0.92rem;
+    line-height: 1.7;
+}
+
+@media (max-width: 950px) {
+    .steps {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 520px) {
+    .steps {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .step::before {
+        transition: none;
+    }
+}
