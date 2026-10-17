@@ -202,3 +202,28 @@ if ('IntersectionObserver' in window) {
 
     observer.observe(steps);
 })();
+
+
+/* home page hero: the rotating word */
+(function () {
+    const word = document.getElementById('rotator-word');
+    if (!word) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const words = ['websites', 'branding', 'marketing', 'business systems'];
+    let i = 0;
+
+    setInterval(function () {
+        word.style.transform = 'translateY(-100%)';
+
+        setTimeout(function () {
+            i = (i + 1) % words.length;
+            word.style.transition = 'none';
+            word.textContent = words[i];
+            word.style.transform = 'translateY(100%)';
+            void word.offsetHeight;
+            word.style.transition = '';
+            word.style.transform = 'translateY(0)';
+        }, 500);
+    }, 2400);
+})();
