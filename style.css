@@ -19,6 +19,7 @@
     --muted: #6d6d6d;
     --border: #e7e7e7;
     --dark-section: #151515;
+    --page: #F5F3EE;
 }
 
 html {
@@ -1767,6 +1768,7 @@ img {
 .rotator {
     display: inline-block;
     height: 1.35em;
+    line-height: 1.35;
     overflow: hidden;
     vertical-align: bottom;
     margin-left: 6px;
