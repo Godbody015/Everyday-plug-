@@ -1785,7 +1785,7 @@ img {
 
 /* =========================================
    HOME PAGE: JOHANNESBURG BACKGROUND
-   (What we do to Our work)
+   (hero to Our work)
 ========================================= */
 
 .city-bg {
@@ -1798,7 +1798,7 @@ img {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.58);
+    background: rgba(0, 0, 0, 0.62);
 }
 
 .city-bg > section {
