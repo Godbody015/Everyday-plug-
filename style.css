@@ -1781,3 +1781,88 @@ img {
     display: block;
     transition: transform 0.5s cubic-bezier(.2,.8,.2,1);
 }
+
+
+/* =========================================
+   HOME PAGE: JOHANNESBURG BACKGROUND
+   (What we do to Our work)
+========================================= */
+
+.city-bg {
+    position: relative;
+    background: #111111 url("jhb-bg.jpg") center bottom / cover no-repeat;
+    background-attachment: fixed;
+}
+
+.city-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.58);
+}
+
+.city-bg > section {
+    position: relative;
+    background: transparent;
+}
+
+.city-bg .section-label {
+    color: var(--secondary);
+}
+
+.city-bg .section-heading h2,
+.city-bg .portfolio-content h2 {
+    color: var(--white);
+}
+
+.city-bg .section-heading p,
+.city-bg .portfolio-content p {
+    color: #eeeeee;
+}
+
+.city-bg .pillar {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.28);
+    color: var(--white);
+}
+
+.city-bg .pillar p {
+    color: #eeeeee;
+}
+
+.city-bg .pillar.active {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.city-bg .pillar.active p {
+    color: #cccccc;
+}
+
+.city-bg .step {
+    border-top-color: rgba(255, 255, 255, 0.3);
+}
+
+.city-bg .step h3 {
+    color: var(--white);
+}
+
+.city-bg .step p {
+    color: #eeeeee;
+}
+
+.city-bg .btn-primary {
+    background: var(--secondary);
+    color: var(--primary);
+}
+
+.city-bg .btn-primary:hover {
+    background: var(--white);
+}
+
+/* phones do not support a fixed background well */
+@media (max-width: 950px) {
+    .city-bg {
+        background-attachment: scroll;
+    }
+}
