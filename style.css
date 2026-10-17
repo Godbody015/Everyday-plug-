@@ -1751,3 +1751,31 @@ img {
         transition: none;
     }
 }
+
+
+/* =========================================
+   HOME PAGE: ROTATING WORD
+========================================= */
+
+.hero-dark .rotator-line {
+    font-size: clamp(1.3rem, 2.4vw, 1.9rem);
+    font-weight: 700;
+    color: var(--white);
+    margin-top: 6px;
+}
+
+.rotator {
+    display: inline-block;
+    height: 1.35em;
+    overflow: hidden;
+    vertical-align: bottom;
+    margin-left: 6px;
+    padding: 0 12px;
+    background: var(--secondary);
+    color: var(--primary);
+}
+
+#rotator-word {
+    display: block;
+    transition: transform 0.5s cubic-bezier(.2,.8,.2,1);
+}
