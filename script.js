@@ -134,11 +134,6 @@ if ('IntersectionObserver' in window) {
         ctx.stroke();
     }
 
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        draw(0.6);
-        return;
-    }
-
     let t = 0;
     let last = null;
 
@@ -208,7 +203,6 @@ if ('IntersectionObserver' in window) {
 (function () {
     const word = document.getElementById('rotator-word');
     if (!word) return;
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
     const words = ['websites', 'branding', 'marketing', 'business systems'];
     let i = 0;
